@@ -147,7 +147,52 @@ Selected.prototype = {
                     prevLine.className = '';
                     //randomize the color of the current line of the lyric
                     line.className = 'current-line-' + that.lyricStyle;
+                    //the beginning
+                    document.getElementById("line-2").hidden='hidden';
+                    document.getElementById("line-3").hidden='hidden';
+                    document.getElementById("line-4").hidden='hidden';
+                    if (i == 2 ){
+                        document.getElementById("line-2").removeAttribute("hidden");
+                        document.getElementById("line-2").innerHTML="●●●";
+                        document.getElementById("line-3").hidden='hidden';
+                        document.getElementById("line-4").hidden='hidden';
+
+                    }else if (i == 3) {
+                        document.getElementById("line-2").hidden='hidden';
+                        document.getElementById("line-3").removeAttribute("hidden");
+                        document.getElementById("line-3").innerHTML="●●   ";
+                        document.getElementById("line-4").hidden='hidden';
+                    }else if (i == 4) {
+                        document.getElementById("line-2").hidden='hidden';
+                        document.getElementById("line-3").hidden='hidden';
+                        document.getElementById("line-4").removeAttribute("hidden");
+                        document.getElementById("line-4").innerHTML="●      ";
+                    };
+
+                    // began to all
+                    document.getElementById("line-43").hidden='hidden';
+                    document.getElementById("line-44").hidden='hidden';
+                    document.getElementById("line-45").hidden='hidden';
+                    if (i == 43 ){
+                        document.getElementById("line-43").removeAttribute("hidden");
+                        document.getElementById("line-43").innerHTML="●●●";
+                        document.getElementById("line-44").hidden='hidden';
+                        document.getElementById("line-45").hidden='hidden';
+
+                    }else if (i == 44) {
+                        document.getElementById("line-43").hidden='hidden';
+                        document.getElementById("line-44").removeAttribute("hidden");
+                        document.getElementById("line-44").innerHTML="●●   ";
+                        document.getElementById("line-45").hidden='hidden';
+                    }else if (i == 45) {
+                        document.getElementById("line-43").hidden='hidden';
+                        document.getElementById("line-44").hidden='hidden';
+                        document.getElementById("line-45").removeAttribute("hidden");
+                        document.getElementById("line-45").innerHTML="●      ";
+                    };
                     that.lyricContainer.style.top = 130 - line.offsetTop + 'px';
+
+
                 };
             };
         });
