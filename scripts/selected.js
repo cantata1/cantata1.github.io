@@ -64,9 +64,9 @@ Selected.prototype = {
             window.location.hash = songName;
             that.play(songName);
         }, false);
-        this.audio.onended = function() {
-            that.playNext(that);
-        }
+        // this.audio.onended = function() {
+        //     that.playNext(that);
+        // }
         this.audio.onerror = function(e) {
             that.lyricContainer.textContent = '!fail to load the song :(';
         };
