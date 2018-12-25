@@ -129,7 +129,8 @@ Selected.prototype = {
         //empty the lyric
         this.lyric = null;
         this.lyricContainer.textContent = 'loading...';
-        this.lyricStyle = Math.floor(Math.random() * 4);
+        //this.lyricStyle = Math.floor(Math.random() * 4);
+        this.lyricStyle = 0;
         this.audio.addEventListener('canplay', function() {
             that.getLyric(that.audio.src.replace('.mp3', '.lrc'));
             this.play();
@@ -148,6 +149,43 @@ Selected.prototype = {
                     //randomize the color of the current line of the lyric
                     line.className = 'current-line-' + that.lyricStyle;
                     //the beginning
+                    if (i==1) {
+                        document.getElementById("line-1").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 13) {
+                        document.getElementById("line-13").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 18) {
+                        document.getElementById("line-18").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 23) {
+                        document.getElementById("line-23").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 32) {
+                        document.getElementById("line-32").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 37) {
+                        document.getElementById("line-37").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 42) {
+                        document.getElementById("line-42").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 54) {
+                        document.getElementById("line-54").setAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    }
+
+                    if (i==2) {
+                        document.getElementById("line-1").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 14) {
+                        document.getElementById("line-13").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 19) {
+                        document.getElementById("line-18").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 14) {
+                        document.getElementById("line-23").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 33) {
+                        document.getElementById("line-32").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 38) {
+                        document.getElementById("line-37").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 43) {
+                        document.getElementById("line-42").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    } else if (i == 55) {
+                        document.getElementById("line-54").removeAttribute("style","color:#b03ef7;font-size:40px;animation:blink 0.2s linear infinite;");
+                    }
+
+
                     document.getElementById("line-2").hidden='hidden';
                     document.getElementById("line-3").hidden='hidden';
                     document.getElementById("line-4").hidden='hidden';
@@ -160,13 +198,13 @@ Selected.prototype = {
                     }else if (i == 3) {
                         document.getElementById("line-2").hidden='hidden';
                         document.getElementById("line-3").removeAttribute("hidden");
-                        document.getElementById("line-3").innerHTML="●●   ";
+                        document.getElementById("line-3").innerHTML="●●&nbsp;&nbsp;";
                         document.getElementById("line-4").hidden='hidden';
                     }else if (i == 4) {
                         document.getElementById("line-2").hidden='hidden';
                         document.getElementById("line-3").hidden='hidden';
                         document.getElementById("line-4").removeAttribute("hidden");
-                        document.getElementById("line-4").innerHTML="●      ";
+                        document.getElementById("line-4").innerHTML="●&nbsp;&nbsp;&nbsp;&nbsp;";
                     };
 
                     // began to all
@@ -182,17 +220,33 @@ Selected.prototype = {
                     }else if (i == 44) {
                         document.getElementById("line-43").hidden='hidden';
                         document.getElementById("line-44").removeAttribute("hidden");
-                        document.getElementById("line-44").innerHTML="●●   ";
+                        document.getElementById("line-44").innerHTML="●●&nbsp;&nbsp;";
                         document.getElementById("line-45").hidden='hidden';
                     }else if (i == 45) {
                         document.getElementById("line-43").hidden='hidden';
                         document.getElementById("line-44").hidden='hidden';
                         document.getElementById("line-45").removeAttribute("hidden");
-                        document.getElementById("line-45").innerHTML="●      ";
+                        document.getElementById("line-45").innerHTML="●&nbsp;&nbsp;&nbsp;&nbsp;";
                     };
+
                     that.lyricContainer.style.top = 130 - line.offsetTop + 'px';
-
-
+                    //ending
+                    if (i == 58 ){
+                        // document.getElementById("line-59").setAttribute("style","color: #fff;font-size:16px;");
+                        document.getElementById("line-59").setAttribute("style","font-size:16px;color:#ba47c1;animation: changeshadow 1s  ease-in  infinite ;");
+                        document.getElementById("line-59").innerHTML="" +
+                            "<br>编 剧 ：杨 Leo<br>" +
+                            "<br>主 唱 ：翟果<br>" +
+                            "<br>吉他手 ：熊浩瀚" +
+                            "<br>尤克里里 ：黄桂兰" +
+                            "<br>前端制作 ：肖旭东<br>" +
+                            "<br>特别支持 ：杨 Jason<br>" +
+                            "<br>合唱人员 ：成都哈曼全体员工" +
+                            "<br>Team 1： 成都CPM全体员工" +
+                            "<br>Team 2： 成都Media全体员工" +
+                            "<br>Team 3： 成都其他部门员工";
+                            "<br>祝大家新年快乐！☺";
+                    }
                 };
             };
         });
