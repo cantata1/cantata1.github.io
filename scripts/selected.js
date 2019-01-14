@@ -234,7 +234,7 @@ Selected.prototype = {
                     //ending
                     if (i == 65 ){
                         // document.getElementById("line-59").setAttribute("style","color: #fff;font-size:16px;");
-                        document.getElementById("line-65").setAttribute("style","font-size:25px;color:#ba47c1;animation: changeshadow 1s  ease-in  infinite ;");
+                        document.getElementById("line-65").setAttribute("style","font-size:33px;color:#19021b;animation: changeshadow 1s  ease-in  infinite ;");
                         document.getElementById("line-65").innerHTML="" +
                             "编 剧 ：Leo Yang<br>" +
                             "<br>主 唱 ：翟果<br>" +
@@ -242,11 +242,12 @@ Selected.prototype = {
                             "<br>尤克里里 ：黄桂兰" +
                             "<br>前端制作 ：肖旭东<br>" +
                             "<br>顾问 ：Jason Yang<br>" +
-                            "<br>领队人员 ：陈旭 邓涛 邓志鹏 李浩 李季 唐扬<br>" +
+                            "<br>领队人员 ：陈旭 邓涛 邓智鹏 李浩 李季 唐扬<br>" +
                             "　 王兵 肖旭东 熊浩瀚 翟果" +
                             "<br>参与人员： 成都哈曼全体员工" +
-                            "<br>祝大家新年快乐！☺";
+                            "<br>祝大家新年快乐！";
                     }
+				
                 };
             };
         });
